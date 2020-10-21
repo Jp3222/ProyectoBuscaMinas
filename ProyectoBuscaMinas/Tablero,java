@@ -1,0 +1,79 @@
+package proyectobuscaminas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tablero {
+
+    private String Tablero[][] = new String[5][5];
+    private int x = (int) (Math.random() * 5);
+    private int y = (int) (Math.random() * 5);
+
+    public String[][] Tablero() {
+        for (int i = 0; i < Tablero.length; i++) {
+            for (int j = 0; j < Tablero[i].length; j++) {
+                Tablero[i][j] = "0";
+            }
+        }
+        Tablero[y][x] = "1";
+        return Tablero;
+    }
+
+    //Metodo para comparar
+    //Verdarero si es 0 = No hay mina
+    //Falso si es 1 = Si hay mina
+    public boolean comparaciones(String M[][], int y, int x) {
+        if (M[y][x].equals("0")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //Metodo para imprimir
+    //M <- Matriz de interface
+    //T <- Matriz del juego
+    //y columnas / x filas
+    //i contador para el caso base
+    public String[][] Busqueda(String M[][], String T[][], int y, int x, int i) {
+        if (i < T.length) {
+            for (int j = 0; j < T[i].length; j++) {
+                if (comparaciones(M, y, x)) {
+                    T[y][x] = "0";
+                } else {
+                    T[y][x] = "1";
+                    Mostrar(T);
+                    System.out.println("Perdiste");
+                    return T;
+                }
+                System.out.print("[" + T[i][j] + "]");
+            }
+            System.out.println("");
+            Busqueda(M, T, y, x, (i + 1));
+        }
+        return T;
+    }
+
+    public int puntuaje(String M[][]) {
+        int puntos = 0;
+        for (int i = 0; i < M.length; i++) {
+            for (int j = 0; j < M[i].length; j++) {
+                if (M[i][j].equals("0")) {
+                    puntos++;
+                }
+            }
+        }
+
+        return puntos;
+    }
+
+    //Metodo para mostrar la matriz
+    public void Mostrar(String M[][]) {
+        for (int i = 0; i < M.length; i++) {
+            for (int j = 0; j < M[i].length; j++) {
+                System.out.print("[" + M[i][j] + "]");
+            }
+            System.out.println("");
+        }
+    }
+}
