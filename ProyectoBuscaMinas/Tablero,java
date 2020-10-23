@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Tablero {
 
+    //Metodo hecho por Peralta Robles Karina Estefania
     private String Tablero[][] = new String[5][5];
     private int x = (int) (Math.random() * 5);
     private int y = (int) (Math.random() * 5);
-    //Metodo hecho por Peralta Robles Karina Estefania
     public String[][] Tablero() {
         for (int i = 0; i < Tablero.length; i++) {
             for (int j = 0; j < Tablero[i].length; j++) {
@@ -55,7 +55,7 @@ public class Tablero {
         return T;
     }
     
-    //Metodo hecho por agustin
+  //Metodo Hecho por Ariagna Acevedo
     public int puntuaje(String M[][]) {
         int puntos = 0;
         for (int i = 0; i < M.length; i++) {
@@ -70,7 +70,7 @@ public class Tablero {
     }
     
     
-    //Metodo hecho por Isabel Martinez
+    //Metodo hecho por Martinez De Los Santos Isabel
     //Metodo para mostrar la matriz
     public void Mostrar(String M[][]) {
         for (int i = 0; i < M.length; i++) {
