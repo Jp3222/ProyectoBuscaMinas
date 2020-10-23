@@ -8,7 +8,7 @@ public class Tablero {
     private String Tablero[][] = new String[5][5];
     private int x = (int) (Math.random() * 5);
     private int y = (int) (Math.random() * 5);
-
+    //Metodo hecho por karina
     public String[][] Tablero() {
         for (int i = 0; i < Tablero.length; i++) {
             for (int j = 0; j < Tablero[i].length; j++) {
@@ -18,7 +18,8 @@ public class Tablero {
         Tablero[y][x] = "1";
         return Tablero;
     }
-
+    
+    //Metodo hecho por liliana
     //Metodo para comparar
     //Verdarero si es 0 = No hay mina
     //Falso si es 1 = Si hay mina
@@ -53,7 +54,8 @@ public class Tablero {
         }
         return T;
     }
-
+    
+    //Metodo hecho por agustin
     public int puntuaje(String M[][]) {
         int puntos = 0;
         for (int i = 0; i < M.length; i++) {
@@ -66,7 +68,9 @@ public class Tablero {
 
         return puntos;
     }
-
+    
+    
+    //Metodo hecho por Ari
     //Metodo para mostrar la matriz
     public void Mostrar(String M[][]) {
         for (int i = 0; i < M.length; i++) {
