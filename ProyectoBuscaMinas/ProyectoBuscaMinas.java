@@ -28,8 +28,10 @@ public class ProyectoBuscaMinas {
         //Variable para definir el fin del programa
         boolean Fin = false;
         Tabla.Mostrar(M);
+        //Mecanismo ciclico hecho por Juan Pablo
         do {
             System.out.println("Puntos: " + puntos);
+            //Validaciones de entrada hechas por agustin
             do {//Validacion
                 System.out.println("Ingrese cordenada en y");
                 y = V.nextInt();
