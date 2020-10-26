@@ -30,7 +30,9 @@ public class Tablero {
             return false;
         }
     }
-
+    
+    
+/////Díaz Rosas Alexis Efrén
     //Metodo para imprimir
     //M <- Matriz de interface
     //T <- Matriz del juego
